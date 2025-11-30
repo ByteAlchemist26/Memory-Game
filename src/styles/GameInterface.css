@@ -1,0 +1,124 @@
+/* --- Main Page Wrapper --- */
+.game-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff7e6;
+  padding-bottom: 40px;
+}
+
+/* --- Center Area for Play Button OR Grid --- */
+.center-area {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Play Button Styling --- */
+.play-btn {
+  padding: 15px 35px;
+  font-size: 20px;
+  background: #6ecff6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.play-btn:hover {
+  background: #47b8dc;
+  transform: scale(1.05);
+}
+
+/* --- Game Grid Layout (5x5) --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(5, 120px);
+  gap: 15px;
+  justify-content: center;
+}
+
+/* -------------------------------------- */
+/*  WIN SCREEN POPUP STYLING              */
+/* -------------------------------------- */
+
+.win-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+
+  animation: fadeIn 0.8s ease-out;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  max-width: 400px;
+
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4),
+              0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.win-text {
+  font-size: 3rem;
+  color: gold;
+  text-shadow: 
+      0 0 10px gold,
+      0 0 20px gold,
+      0 0 40px #ffdd55;
+
+  animation: popIn 0.6s ease-out;
+  margin-bottom: 10px;
+}
+
+.win-sub {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Text pop animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.user-email {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  opacity: 0.8;
+}

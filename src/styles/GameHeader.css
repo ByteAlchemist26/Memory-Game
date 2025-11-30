@@ -1,0 +1,35 @@
+.game-header {
+  width: 100%;
+  padding: 20px;
+  background: #ffdd8d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-box {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.game-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+.logout-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.logout-btn:hover {
+  background: #e60000;
+}
+
